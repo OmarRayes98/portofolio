@@ -6,9 +6,9 @@ import { cn } from "@/lib/utils";
 import { Statistic } from "@/types/interfaces";
 import { ArrowRightCircle } from "lucide-react";
 
-const AboutSection = () => {
+const AboutSection = async () => {
 
-  const {statistics} = getStatistics();
+  const {statistics} = await getStatistics();
   return (
     <section id="about" className="relative">
       <Effect className="-left-32 md:-left-44 -top-12" />

@@ -1,6 +1,7 @@
 import { buttonVariants } from "@/components/ui/button"
 import { Effect } from "@/components/ui/effects"
 import { socialLinks } from "@/constants/social-links"
+import { cn } from "@/lib/utils"
 import { ArrowRightCircle, Download } from "lucide-react"
 import Image from "next/image"
 
@@ -38,7 +39,7 @@ const HomeSection = () => {
           explicabo at adipisci.
         </p>
         <div className="flex items-center gap-2 py-4">
-          <a href="#projects" className={buttonVariants({ size: "lg" })}>
+          <a href="#projects" className={cn(buttonVariants({ size: "lg" }),"px-4 md:px-8")}>
             <span>my works</span>
             <ArrowRightCircle className="size-4" />
           </a>
@@ -47,7 +48,7 @@ const HomeSection = () => {
             href="/cv.pdf"
             target="_blank"
             download
-            className={buttonVariants({ variant: "outline", size: "lg" })}
+            className={cn(buttonVariants({ variant: "outline", size: "lg" }),"px-4 md:px-8")}
           >
             <span>download cv</span>
             <Download className="size-4" />
